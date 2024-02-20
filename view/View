@@ -1,0 +1,27 @@
+public class view {
+    switch (choice) {
+        case 1:
+            CreateHuman();
+
+            case 2:
+                ViewHuman();
+
+                case 3:
+                    UpdateHuman();
+
+                    case 4:
+                        DeleteHuman();
+
+                        case 5:
+                         AddHuman();
+
+                        case 6:
+                            System.out.println("Goodbye!");
+                            break;
+
+                            default:
+                                System.out.println("Invalid choice!");
+                                break;
+
+    }
+}

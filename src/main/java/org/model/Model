@@ -1,0 +1,9 @@
+
+public class Model {
+    
+    public human( String name, int age, String gender, LocalDate birthdate) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.birthdate = birthdate;
+}
