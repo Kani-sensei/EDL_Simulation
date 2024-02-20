@@ -2,6 +2,7 @@ package org.human;
 
 import java.time.LocalDate;
 import java.util.Scanner;
+import java.util.Scanner;
 
 public class controller {
     private static String name;
@@ -111,13 +112,49 @@ public class controller {
             human.setName(name);
             human.setGender(gender);
             human.setAge(age);
-            int year = 0; // Declare the variable year
-            int month = 0; // Declare the variable month
-            int day = 0; // Declare the variable day
-            human.haveBirthday(createBirthdate(year, month, day)); // Fix: Pass the required arguments for the createBirthdate() method.
+            int year = 0; 
+            int month = 0; 
+            int day = 0; 
+            human.haveBirthday(createBirthdate(year, month, day)); 
+        }
+    }
+
+    public class UpdateHuman {
+        public static void main(String[] args) {
+            int year = 0;
+            int month = 0;
+            int day = 0;
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Enter name: ");
+            String name = scanner.nextLine();
+
+            System.out.println("Enter new name: ");
+            String newName = scanner.nextLine();
+
+            System.out.println("Enter new age: ");
+            int newAge = scanner.nextInt();
+
+            System.out.println("Enter new gender: ");
+            String newGender = scanner.next();
+
+            controller human = new controller();
+
+            if (newName.equals(human.getName()) && newAge == human.getAge() || newGender.equals(human.getGender())) {
+                System.out.println("Values are the same!");
+            } else {
+                System.out.println("Human updated!");
+                human.setName(newName);
+                human.setAge(newAge);
+                human.setGender(newGender);
+                human.haveBirthday(createBirthdate(year, month, day));
+            }
         }
     }
 }
+}
+
 
            
 
