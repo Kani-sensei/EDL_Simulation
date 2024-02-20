@@ -1,27 +1,88 @@
-public class view {
-    switch (choice) {
-        case 1:
-            CreateHuman();
+public class View {
+
+    DisplayOptionsForCRUD() {
+        System.out.println("1. Create Human");
+        System.out.println("2. View Human");
+        System.out.println("3. Update Human");
+        System.out.println("4. Delete Human");
+        System.out.println("5. Add Human");
+        System.out.println("6. Exit");
+    }
+
+    HandleCRUDOptions() {
+        int choice; 
+
+        switch (choice) {
+            case 1:
+                CreateHuman();
+                break;
 
             case 2:
                 ViewHuman();
+                break;
 
-                case 3:
-                    UpdateHuman();
+            case 3:
+                UpdateHuman();
+                break;
 
-                    case 4:
-                        DeleteHuman();
+            case 4:
+                DeleteHuman();
+                break;
 
-                        case 5:
-                         AddHuman();
+            case 5:
+                AddHuman();
+                break;
 
-                        case 6:
-                            System.out.println("Goodbye!");
-                            break;
+            case 6:
+                System.out.println("Goodbye!");
+                break;
 
-                            default:
-                                System.out.println("Invalid choice!");
-                                break;
+            default:
+                System.out.println("Invalid choice!");
+                break;
+        }
+    }
+}
 
+public class DisplayOptionsForActivities() {
+    System.out.println("1. Create Activity");
+    System.out.println("2. View Activity");
+    System.out.println("3. Update Activity");
+    System.out.println("4. Delete Activity");
+    System.out.println("5. Add Activity");
+    System.out.println("6. Exit");
+}
+
+public class HandleActivityOptions() {
+    int choice; 
+
+    switch (choice) {
+        case 1:
+            CreateActivity();
+            break;
+
+        case 2:
+            ViewActivity();
+            break;
+
+        case 3:
+            UpdateActivity();
+            break;
+
+        case 4:
+            DeleteActivity();
+            break;
+
+        case 5:
+            AddActivity();
+            break;
+
+        case 6:
+            System.out.println("Goodbye!");
+            break;
+
+        default:
+            System.out.println("Invalid choice!");
+            break;
     }
 }
