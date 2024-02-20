@@ -122,6 +122,7 @@ public class Controller {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the name of the human you want to delete: ");
             String name = scanner.nextLine();
+            scanner.close();
 
             for (Controller human : humans) {
                 if (human.getName().equals(name)) {
