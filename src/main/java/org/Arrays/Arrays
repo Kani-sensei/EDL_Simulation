@@ -1,0 +1,3 @@
+public class Arrays {
+    String[] humans = new String[];
+}
