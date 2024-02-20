@@ -1,10 +1,16 @@
 
 public class Model {
     
-    human(String name, int age, String gender, LocalDate birthdate) {
+    human (String name, int age, String gender, LocalDate birthdate) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.birthdate = birthdate; 
+    }
+
+    activity (String name, String location,  LocalDate date) {
+        this.activity = activity;
+        this.location = location;
+        this.date = date;
     }
 }
