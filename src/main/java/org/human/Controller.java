@@ -1,3 +1,5 @@
+package org.human;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,24 +54,31 @@ public class Controller {
     }
 
     public class CreateHuman {
-        public void main(String[] args) {
+        public static void main(String[] args) {
+            List<Controller> humans = new ArrayList<>(); 
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter your name: ");
-            String name = scanner.nextLine();
-            System.out.println("Enter your age: ");
-            int age = scanner.nextInt();
-            scanner.nextLine(); // consume newline left-over
-            System.out.println("Enter your gender: ");
-            String gender = scanner.nextLine();
-            System.out.println("Enter your birth year: ");
+            System.out.println("Enter name: ");
+            String newName = scanner.nextLine();
+            System.out.println("Enter age: ");
+            int newAge = scanner.nextInt();
+            scanner.nextLine(); 
+            System.out.println("Enter gender: ");
+            String newGender = scanner.nextLine();
+            System.out.println("Enter birth year: ");
             int year = scanner.nextInt();
-            System.out.println("Enter your birth month: ");
+            System.out.println("Enter birth month: ");
             int month = scanner.nextInt();
-            System.out.println("Enter your birth day: ");
+            System.out.println("Enter birth day: ");
             int day = scanner.nextInt();
-            scanner.nextLine(); // consume newline left-over
+            scanner.nextLine(); 
             try {
-                LocalDate birthdate = createBirthdate(year, month, day);
+                LocalDate birthdate = Controller.createBirthdate(year, month, day);
+                Controller newHuman = new Controller();
+                newHuman.setName(newName);
+                newHuman.setAge(newAge);
+                newHuman.setGender(newGender);
+                newHuman.setBirthdate(birthdate);
+                humans.add(newHuman);
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid attributes: " + e.getMessage());
                 System.out.println("Please enter valid attributes!");
@@ -117,6 +126,11 @@ public class Controller {
             for (Controller human : humans) {
                 if (human.getName().equals(name)) {
                     humans.remove(human);
+                }
+
+                else {
+                    System.out.println("Human not found");
+                    return;
                 }
             }
             scanner.close();
