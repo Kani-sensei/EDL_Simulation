@@ -1,3 +1,5 @@
 public class Arrays {
     String[] humans = new String[];
+
+    String[] activities = new String[];
 }
