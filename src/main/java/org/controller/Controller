@@ -16,9 +16,6 @@ public class Controller {
         this.health = "good"; // Set starting health to "good"
     }
 
-    // Rest of the code...
-
-
     public class CreateHuman {
         public static void main(String[] args) {
             List<Controller> humans = new ArrayList<>(); 
@@ -104,8 +101,6 @@ public class Controller {
             scanner.close();
         }
     }
-
-    public class 
 
     public class healthstate {
         private String health;
