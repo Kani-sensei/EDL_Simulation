@@ -1,4 +1,4 @@
-package org.human;
+package org.controller;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
