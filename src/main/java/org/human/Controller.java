@@ -137,4 +137,68 @@ public class Controller {
             scanner.close();
         }
     }
-}
+
+    public class healthstate {
+        private String health;
+        private int weight;
+        private int heartRate;
+
+        public String getHealth() {
+            return health;
+        }
+
+        public void setHealth(String health) {
+            this.health = health;
+        }
+
+        public int getWeight() {
+            return weight;
+        }
+
+        public void setWeight(int weight) {
+            this.weight = weight;
+        }
+
+        public int getHeartRate() {
+            return heartRate;
+        }
+
+        public void setHeartRate(int heartRate) {
+            this.heartRate = heartRate;
+                }
+            }
+                private String health;
+                private int weight;
+                private int heartRate;
+
+                public String getHealth() {
+                    return health;
+                }
+
+                public void setHealth(String health) {
+                    this.health = health;
+                }
+
+                public int getWeight() {
+                    return weight;
+                }
+
+                public void setWeight(int weight) {
+                    this.weight = weight;
+                }
+
+                public int getHeartRate() {
+                    return heartRate;
+                }
+
+                public void setHeartRate(int heartRate) {
+                    this.heartRate = heartRate;
+                }
+            }
+        
+            
+    
+
+
+    
+
