@@ -104,6 +104,8 @@ public class DoActivity() {
     System.out.println("2" "Exercise")
     System.out.println("3" "Sleep")
     System.out.println("4" "Go out with friends")
+
+}
 public class HandleActivityOptions() {
     int choice; 
 
