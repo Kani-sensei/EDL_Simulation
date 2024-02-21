@@ -27,5 +27,7 @@ public class Model {
     healthValues(100 - 80 = good, 79 - 60 = okay, 59 - 0 = bad) {
         this.healthValues = healthValues;
     }
+
+    
 }
 

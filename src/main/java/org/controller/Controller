@@ -100,6 +100,27 @@ public class Controller {
         }
     }
 
+    public class CreateActivity() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name of activity: ");
+        System.out.println("Enter location");
+        System.out.println("Enter year: ");
+
+        String name = scanner.nextLine();
+        String location = scanner.nextLine();
+        int year = scanner.nextInt();
+        System.out.println("Enter month: ");
+        
+    }
+
+
+
+
+
+
+
+
+
     public class healthstate {
         private String health;
         private int weight;
@@ -112,6 +133,8 @@ public class Controller {
         public void setHealth(String health) {
             this.health = health;
         }
+
+        
 
         public int getWeight() {
             return weight;
