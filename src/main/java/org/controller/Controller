@@ -10,48 +10,14 @@ public class Controller {
     private String gender;
     private int age;
     private LocalDate birthdate;
+    private String health; // Added health field
 
-    public String getName() {
-        return name;
+    public Controller() {
+        this.health = "good"; // Set starting health to "good"
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // Rest of the code...
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public LocalDate getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
-    }
-
-    public static LocalDate createBirthdate(int year, int month, int day) {
-        if (month < 1 || month > 12) {
-            throw new IllegalArgumentException("Unknown month: " + month);
-        }
-        if (day < 1 || day > 31) {
-            throw new IllegalArgumentException("Unknown day: " + day);
-        }
-        return LocalDate.of(year, month, day);
-    }
 
     public class CreateHuman {
         public static void main(String[] args) {
@@ -78,6 +44,7 @@ public class Controller {
                 newHuman.setAge(newAge);
                 newHuman.setGender(newGender);
                 newHuman.setBirthdate(birthdate);
+                newHuman.setHealth("good");
                 humans.add(newHuman);
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid attributes: " + e.getMessage());

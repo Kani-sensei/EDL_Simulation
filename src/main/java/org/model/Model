@@ -1,7 +1,7 @@
 
 public class Model {
     
-    human (String name, int age, String gender, LocalDate birthdate, health ="good") {
+    human (String name, int age, String gender, LocalDate birthdate, health) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -16,7 +16,7 @@ public class Model {
 
     //healthstate can be affected by activities
 
-    health ( String name = "good", "okay", "bad", int weight, int heartRate, String mood) {
+    health ( String name = "good", "okay", "bad", int weight, int heartRate, Int bloodPressure,  String mood) {
         this.name = name;
         this.weight = weight;
         this.height = height;
