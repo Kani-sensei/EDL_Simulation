@@ -12,9 +12,7 @@ public class Controller {
     private LocalDate birthdate;
     private String health; // Added health field
 
-    public Controller() {
-        this.health = "good"; // Set starting health to "good"
-    }
+   
 
     public class CreateHuman {
         public static void main(String[] args) {
@@ -157,6 +155,12 @@ public class Controller {
 
                 public void setHeartRate(int heartRate) {
                     this.heartRate = heartRate;
+                }
+
+                //constructor for controller
+
+                public Controller() {
+                    this.health = "good"; // Set starting health to "good"
                 }
             }
         
