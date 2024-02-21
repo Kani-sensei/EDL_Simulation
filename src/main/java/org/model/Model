@@ -23,4 +23,9 @@ public class Model {
         this.bloodPressure = bloodPressure;
         this.heartRate = heartRate;
     }
+
+    healthValues(100 - 80 = good, 79 - 60 = okay, 59 - 0 = bad) {
+        this.healthValues = healthValues;
+    }
 }
+
