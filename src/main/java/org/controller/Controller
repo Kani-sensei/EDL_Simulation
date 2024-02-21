@@ -128,15 +128,29 @@ public class Controller {
     }
 
     public class CreateActivity() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter name of activity: ");
-        System.out.println("Enter location");
-        System.out.println("Enter year: ");
+        public static void main(String[] args) {
+            List<Controller> humans = new ArrayList<>();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter the name of the person you want to add an activity to: ");
+            String name = scanner.nextLine();
 
-        String name = scanner.nextLine();
-        String location = scanner.nextLine();
-        int year = scanner.nextInt();
-        System.out.println("Enter month: ");
+            try {
+            for (Controller human : humans) {
+                if (human.getName().equals(name)) {
+                    System.out.println("Enter the activity: ");
+                    String activity = scanner.nextLine();
+                    System.out.println("Enter the date of the activity: ");
+                    String date = scanner.nextLine();
+                    human.addActivity(activity, date);
+                }
+            }
+            scanner.close();
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid attributes: " + e.getMessage());
+                System.out.println("Please enter a valid activity!");
+            }
+        }
         
     }
 
