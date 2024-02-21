@@ -16,7 +16,7 @@ public class Model {
 
     //healthstate can be affected by activities
 
-    health ( String name = "good", "okay", "bad", int weight, int heartRate, Int bloodPressure,  String mood) {
+    health (healthValues, int weight, int heartRate, Int bloodPressure,  String mood) {
         this.name = name;
         this.weight = weight;
         this.height = height;
