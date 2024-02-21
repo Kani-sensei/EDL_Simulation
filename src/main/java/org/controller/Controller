@@ -157,10 +157,10 @@ public class Controller {
                     this.heartRate = heartRate;
                 }
 
-                //constructor for controller
+                //constructor for controller, initializes starting health to good
 
                 public Controller() {
-                    this.health = "good"; // Set starting health to "good"
+                    this.health = "good"; 
                 }
             }
         
