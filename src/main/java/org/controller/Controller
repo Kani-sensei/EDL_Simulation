@@ -76,6 +76,8 @@ public class Controller {
         }
     }
 
+
+
     public class ViewHuman {
         public static void main(String[] args) {
             List<Controller> humans = new ArrayList<>(); 
@@ -85,6 +87,9 @@ public class Controller {
             }
         }
     }
+
+
+
 
     public class UpdateHuman {
         public static void main(String[] args) {
@@ -104,6 +109,8 @@ public class Controller {
             scanner.close();
         }
     }
+
+
 
     public class DeleteHuman {
         public static void main(String[] args) {
@@ -127,9 +134,10 @@ public class Controller {
         }
     }
 
+
+
     public class CreateActivity() {
         public static void main(String[] args) {
-            List<Controller> humans = new ArrayList<>();
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the name of the person you want to add an activity to: ");
             String name = scanner.nextLine();
@@ -144,7 +152,7 @@ public class Controller {
                     human.addActivity(activity, date);
 
                 } else {
-                    System.out.println(" Not found, reenter name:");
+                    System.out.println(" Not found, re enter name:");
                     return;
                 }
             }
@@ -156,6 +164,87 @@ public class Controller {
             }
         }
         
+    }
+
+
+
+
+    public class ViewActivity() {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter the name of the person you want to view activities for: ");
+            String name = scanner.nextLine();
+        try {
+            for (Controller human : humans) {
+                if (human.getName().equals(name)) {
+                    System.out.println(human.getActivities());
+                } else {
+                    System.out.println("Not found, re enter name:");
+                    return;
+                }
+            }
+            scanner.close();
+        }
+
+      catch (exception e) {
+          System.out.println("Invalid: " + e.getMessage());
+          System.out.println("Please enter a valid activity!");
+      }
+    }
+
+
+
+    
+    public class UpdateActivity() {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter the name of the person you want to update activities for: ");
+            String name = scanner.nextLine();
+
+            for (Controller human : humans) {
+                if (human.getName().equals(name)) {
+                    System.out.println("Enter the activity you want to update: ");
+                    String activity = scanner.nextLine();
+                    System.out.println("Enter the new date of the activity: ");
+                    String date = scanner.nextLine();
+                    human.updateActivity(activity, date);
+                } else {
+                    System.out.println("Not found, re enter name:");
+                    return;
+                }
+            }
+            scanner.close();
+        }
+    }
+
+    public class DeleteActivity() {
+        public class DeleteActivity {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter the name of the person you want to delete activities for: ");
+                String name = scanner.nextLine();
+
+                for (Controller human : humans) {
+                                        if (human.getName().equals(name) && human.getActivities() != null) {
+                                            System.out.println("Enter the activity you want to delete: ");
+                                            String activity = scanner.nextLine();
+                                            human.deleteActivity(activity);
+
+                                            if (activity.getActivities() != null && activity.getActivities().size() > 0){
+                                                System.out.println("Activity not found.");
+                                                return;
+                                            }
+
+                                            else {
+                                            System.out.println("Activity deleted successfully.");
+                                            return;
+                                        }
+                }
+
+                System.out.println("Person or activity not found.");
+                scanner.close();
+            }
+        }
     }
 
 
@@ -223,6 +312,10 @@ public class Controller {
 
                 public void setHeartRate(int heartRate) {
                     this.heartRate = heartRate;
+                }
+
+                public void getActivities {
+                    return activities;
                 }
 
                 //constructor for controller, initializes starting health to good
