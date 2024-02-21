@@ -142,6 +142,10 @@ public class Controller {
                     System.out.println("Enter the date of the activity: ");
                     String date = scanner.nextLine();
                     human.addActivity(activity, date);
+
+                } else {
+                    System.out.println(" Not found, reenter name:");
+                    return;
                 }
             }
             scanner.close();
