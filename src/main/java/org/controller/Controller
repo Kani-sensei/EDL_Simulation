@@ -16,22 +16,49 @@ public class Controller {
 
     public class CreateHuman {
         public static void main(String[] args) {
-            List<Controller> humans = new ArrayList<>(); 
+            List<Controller> humans = new ArrayList<>();
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter name: ");
             String newName = scanner.nextLine();
             System.out.println("Enter age: ");
-            int newAge = scanner.nextInt();
-            scanner.nextLine(); 
+            int newAge = 0;
+            try {
+                newAge = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid age input. Please enter a valid integer.");
+                scanner.close();
+                return;
+            }
             System.out.println("Enter gender: ");
             String newGender = scanner.nextLine();
             System.out.println("Enter birth year: ");
-            int year = scanner.nextInt();
+            int year = 0;
+            try {
+                year = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid birth year input. Please enter a valid integer.");
+                scanner.close();
+                return;
+            }
             System.out.println("Enter birth month: ");
-            int month = scanner.nextInt();
+            int month = 0;
+            try {
+                month = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid birth month input. Please enter a valid integer.");
+                scanner.close();
+                return;
+            }
             System.out.println("Enter birth day: ");
-            int day = scanner.nextInt();
-            scanner.nextLine(); 
+            int day = 0;
+            try {
+                day = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid birth day input. Please enter a valid integer.");
+                scanner.close();
+                return;
+            }
+            scanner.nextLine();
             try {
                 LocalDate birthdate = Controller.createBirthdate(year, month, day);
                 Controller newHuman = new Controller();
