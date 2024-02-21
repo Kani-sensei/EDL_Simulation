@@ -3,5 +3,7 @@ public class Arrays {
 
     String[] activities = new String[];
 
+
+    //evtl für healthstate Speicherung
     //String[] health = new String[];
 }
