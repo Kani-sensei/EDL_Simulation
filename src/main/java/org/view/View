@@ -44,12 +44,15 @@ public class View {
     }
 }
 
-public class DisplayOptionsForActivities() {
+//activities affect health/healthstate
+//Adden
+
+public class DisplayCRUDOptionsForActivities() {
     System.out.println("1. Create Activity");
     System.out.println("2. View Activity");
     System.out.println("3. Update Activity");
     System.out.println("4. Delete Activity");
-    System.out.println("5. Add Activity");
+    System.out.println("5. Do Activity");
     System.out.println("6. Exit");
 }
 
@@ -74,7 +77,55 @@ public class HandleActivityOptions() {
             break;
 
         case 5:
-            AddActivity();
+            DoActivity();
+            break;
+
+        case 6:
+            System.out.println("Goodbye!");
+            Isrunning = false;
+            break;
+
+        default:
+            System.out.println("Invalid choice!");
+    }
+}
+
+public class DisplayOptionsForActivities() {
+    System.out.println("1. Create Activity");
+    System.out.println("2. View Activity");
+    System.out.println("3. Update Activity");
+    System.out.println("4. Delete Activity");
+    System.out.println("5. Do Activity");
+    System.out.println("6. Exit");
+}
+
+public class DoActivity() {
+   System.out.println("1" "Eat and drink ")
+    System.out.println("2" "Exercise")
+    System.out.println("3" "Sleep")
+    System.out.println("4" "Go out with friends")
+public class HandleActivityOptions() {
+    int choice; 
+
+    switch (choice) {
+        case 1:
+            CreateActivity();
+            break;
+
+        case 2:
+            ViewActivity();
+            break;
+
+        case 3:
+            UpdateActivity();
+            break;
+
+        case 4:
+            DeleteActivity();
+            break;
+
+        case 5:
+            DoActivity();
             break;
 
         case 6:

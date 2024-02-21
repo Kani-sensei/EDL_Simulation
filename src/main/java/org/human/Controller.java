@@ -138,6 +138,8 @@ public class Controller {
         }
     }
 
+    public class 
+
     public class healthstate {
         private String health;
         private int weight;
@@ -196,7 +198,7 @@ public class Controller {
                 }
             }
         
-            
+
     
 
 
