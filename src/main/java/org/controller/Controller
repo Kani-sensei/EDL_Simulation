@@ -85,6 +85,10 @@ public class Controller {
             for (Controller human : humans) {
                 System.out.println(human);
             }
+
+            if (humans.isEmpty()) {
+                System.out.println("No humans found.");
+            }
         }
     }
 
@@ -169,7 +173,7 @@ public class Controller {
 
 
 
-    public class ViewActivity() {
+    public class ViewActivity() {	
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the name of the person you want to view activities for: ");
@@ -191,6 +195,7 @@ public class Controller {
           System.out.println("Please enter a valid activity!");
       }
     }
+    }   	
 
 
 
